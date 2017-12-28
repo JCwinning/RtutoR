@@ -1,0 +1,5 @@
+1) Input validation..
+  a) Target_var and group_names should be in the dataframe columns
+  b) themes should be in the dataframe column etc...
+2) Exception scenarios
+  a) All cat variables with more than max no of levels
