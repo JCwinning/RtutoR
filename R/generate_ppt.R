@@ -77,7 +77,7 @@ generate_exploratory_analysis_ppt <- function(df, target_var, output_file_name,
   names(univariate_hist_plots) <- lapply(numeric_features, function(x) paste("Histogram -",x))
 
   univar_num_features_summary <- lapply(numeric_features, function(var_name) {
-    val <- data.frame(t(fivenum(df[[var_name]])))
+    val <- data.frame(t(Summarize(df[[var_name]])))
     val[] = lapply(val, function(x) round(x,2))
     colnames(val) <- c("min","25th","50th","75th","max")
     return(val)
